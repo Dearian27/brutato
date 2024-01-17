@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://hhw5gp5si5ux"]
+
+[ext_resource type="PackedScene" uid="uid://bewoubqruj6rr" path="res://prefabs/tree.tscn" id="1_hv8j5"]
+[ext_resource type="PackedScene" uid="uid://bjm85pikfuxs3" path="res://prefabs/player.tscn" id="2_gelki"]
+[ext_resource type="PackedScene" uid="uid://bwo8wvhevv4d5" path="res://prefabs/slime.tscn" id="3_mq6ov"]
+[ext_resource type="PackedScene" uid="uid://cui8p8qhy862g" path="res://prefabs/gun.tscn" id="4_geu4m"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0.752941, 1, 1, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_gelki")]
+position = Vector2(573, 329)
+
+[node name="tree" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(198, 479)
+
+[node name="tree2" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(284, 161)
+
+[node name="tree3" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(923, 130)
+
+[node name="tree4" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(981, 178)
+
+[node name="tree5" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(895, 207)
+
+[node name="tree6" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(870, 518)
+
+[node name="tree7" parent="." instance=ExtResource("1_hv8j5")]
+position = Vector2(714, 594)
+
+[node name="Slime" parent="." instance=ExtResource("3_mq6ov")]
+position = Vector2(153, 234)
+
+[node name="Slime2" parent="." instance=ExtResource("3_mq6ov")]
+position = Vector2(777, 125)
+
+[node name="Slime3" parent="." instance=ExtResource("3_mq6ov")]
+position = Vector2(1029, 443)
+
+[node name="Slime4" parent="." instance=ExtResource("3_mq6ov")]
+position = Vector2(387, 602)
+
+[node name="Slime5" parent="." instance=ExtResource("3_mq6ov")]
+position = Vector2(70, 594)
+
+[node name="Area2D" parent="." instance=ExtResource("4_geu4m")]

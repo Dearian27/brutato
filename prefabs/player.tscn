@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjm85pikfuxs3"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_adlld"]
+[ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="1_tjs2y"]
+[ext_resource type="PackedScene" uid="uid://cui8p8qhy862g" path="res://prefabs/gun.tscn" id="2_bhsa7"]
+[ext_resource type="Script" path="res://player/sprite.gd" id="3_ohl4u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oby4c"]
+radius = 18.0
+height = 52.0
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_adlld")
+
+[node name="Gun" parent="." instance=ExtResource("2_bhsa7")]
+position = Vector2(0, -24)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -39)
+texture = ExtResource("1_tjs2y")
+script = ExtResource("3_ohl4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_oby4c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 12.0
